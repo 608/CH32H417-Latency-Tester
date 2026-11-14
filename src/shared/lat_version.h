@@ -5,6 +5,6 @@
 #define LAT_VERSION_H
 
 #define LAT_FW_VERSION_MAJOR 1u
-#define LAT_FW_VERSION_MINOR 0u
+#define LAT_FW_VERSION_MINOR 1u
 
 #endif /* LAT_VERSION_H */

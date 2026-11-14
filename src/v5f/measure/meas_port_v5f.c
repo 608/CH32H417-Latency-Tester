@@ -122,7 +122,14 @@ void meas_tim9_ch1(uint64_t t_isr)
     uint64_t tick;
     uint64_t tm = 0u;
 
-    if ((s_trig_armed == 0u) || ((int32_t)((uint32_t)t_isr - s_trig_lo) < 0))
+    /*
+     * t_isr is the counter read at ISR entry, before the flags. When CH1 matches
+     * between those two reads (ISR entered for another source), t_isr is just
+     * before the compare value although CC1IF is set. Check the current time so
+     * the trigger is not lost.
+     */
+    (void)t_isr;
+    if ((s_trig_armed == 0u) || ((int32_t)((uint32_t)tim9_now() - s_trig_lo) < 0))
     {
         return;
     }

@@ -23,14 +23,14 @@ FWの初回書き込み時のみLINKEポートをPCに接続する必要があ�
 
 ### バイナリのダウンロード
 
-[Releases](https://github.com/608/CH32H417-Latency-Tester/releases)から`CH32H417-Latency-Tester-v1.0.0.bin`をダウンロードします。
+[Releases](https://github.com/608/CH32H417-Latency-Tester/releases)から`CH32H417-Latency-Tester-v1.1.0.bin`をダウンロードします。
 
 ### インストール
 
 1. LINKEポートをPCに接続します。
 2. WCH-LinkUtilityを起動し、`Core`で`RISC-V`、`Series`で`CH32H41X`を選択します。
 3. `Target` > `Clear All Code Flash-By Power off`を実行します。
-4. `File` > `Open Firmware`から`CH32H417-Latency-Tester-v1.0.0.bin`を開き、`addr`に`0x08000000`を設定して、`Program`と`Verify`にチェックを入れます。
+4. `File` > `Open Firmware`から`CH32H417-Latency-Tester-v1.1.0.bin`を開き、`addr`に`0x08000000`を設定して、`Program`と`Verify`にチェックを入れます。
 5. `Target` > `Program`を実行し、ログに`Succeed`と表示されることを確認します。
 
 ## ビルド
